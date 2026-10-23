@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.cabecalho {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background-color: #285943;
+  z-index: 1000;
+}
+
+.navegacao ul {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+}
+
+.navegacao ul a {
+  display: inline-block;
+  font-family: "Afacad Flux", sans-serif;
+  color: #fff;
+  font-size: 18px;
+  transition:
+    transform 0.3s ease,
+    color 0.2s ease;
+}
+
+.navegacao ul a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transform: scale(1.05);
+  color: #f4ebdd;
+}
+
+.btn-icone {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.2s ease;
+}
+
+.btn-icone:hover {
+    transform: scale(1.1);
+}
+
