@@ -2,7 +2,10 @@
   --verde: #285943;
   --creme: #f4ebdd;
   --terracota: #d8754b;
+  --terrahover: #bd603b;
   --grafite: #282b28;
+  --destaque: #fce8c9;
+  --destaquehover: #f8ddb5;
 }
 
 * {
@@ -11,6 +14,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: "Afacad Flux", sans-serif;
 }
 
 .cabecalho {
@@ -32,7 +36,6 @@
 
 .navegacao ul a {
   display: inline-block;
-  font-family: "Afacad Flux", sans-serif;
   color: #fff;
   font-size: 18px;
   transition:
@@ -70,12 +73,11 @@ main {
   position: relative;
   display: flex;
   align-items: center;
-  font-family: "Afacad Flux", sans-serif;
   color: var(--grafite);
   min-height: 420px;
   padding: 32px 48px;
   overflow: hidden;
-  background-color: var(--creme);
+  background-color: var(--destaque);
   border-top: 10px solid var(--verde);
 }
 
@@ -85,10 +87,10 @@ main {
   background-image:
     linear-gradient(
       to right,
-      var(--creme) 0%,
-      rgba(244, 235, 221, 0.95) 10%,
-      rgba(244, 235, 221, 0.55) 40%,
-      rgba(244, 235, 221, 0) 60%
+      var(--destaque) 0%,
+      rgba(252, 232, 201, 0.95) 10%,
+      rgba(252, 232, 201, 0.55) 40%,
+      rgba(252, 232, 201, 0) 60%
     ),
     url("../assets/img/comunidade.png");
   background-size: cover;
@@ -153,6 +155,230 @@ main {
 }
 
 .introducao-botao:hover {
-  background-color: #bd603b;
+  background-color: var(--terrahover);
   transform: translateY(-2px);
+}
+
+.info {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 1fr);
+  gap: clamp(20px, 3vw, 36px);
+  padding: clamp(20px, 3vw, 32px);
+  background-color: var(--creme);
+  color: var(--grafite);
+  align-items: stretch;
+}
+
+.info-inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(24px, 3vw, 32px);
+  min-width: 0;
+}
+
+.titulo-secao {
+  margin-bottom: clamp(16px, 2vw, 24px);
+  font-size: clamp(1.25rem, 1.8vw, 1.8rem);
+  font-weight: 700;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.como-funciona {
+  min-width: 0;
+}
+
+.funcoes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.funcao {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  padding-inline: clamp(8px, 1.3vw, 20px);
+  border-right: 1px solid #d7ccbc;
+}
+
+.funcao:first-child {
+  padding-left: 0;
+}
+
+.funcao:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+.funcao-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: clamp(44px, 5vw, 66px);
+  aspect-ratio: 1.22;
+  margin-bottom: clamp(8px, 1vw, 12px);
+  border-radius: clamp(12px, 1.3vw, 16px);
+  background-color: var(--destaque);
+  flex-shrink: 0;
+}
+
+.funcao-icon img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.funcao h3 {
+  margin-bottom: 4px;
+  font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+  font-weight: 700;
+  overflow-wrap: break-word;
+}
+
+.funcao p {
+  max-width: 100%;
+  font-size: clamp(0.75rem, 0.95vw, 1rem);
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+.comunidade-banner {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
+  min-width: 0;
+  padding: clamp(16px, 2vw, 22px);
+  border-radius: 9px;
+  background-color: var(--verde);
+  color: #ffffff;
+}
+
+.comunidade-banner-icon {
+  flex-shrink: 0;
+  width: clamp(32px, 4vw, 48px);
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.comunidade-banner-conteudo {
+  min-width: 0;
+}
+
+.comunidade-banner-conteudo h2 {
+  margin-bottom: 6px;
+  font-size: clamp(1rem, 1.5vw, 1.8rem);
+  overflow-wrap: break-word;
+}
+
+.comunidade-banner-conteudo p {
+  max-width: 390px;
+  margin-bottom: 12px;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  line-height: 1.5;
+}
+
+.comunidade-banner-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 9px clamp(12px, 1.5vw, 17px);
+  border-radius: 24px;
+  background-color: var(--terracota);
+  color: #ffffff;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  transition: background-color 0.2s ease;
+}
+
+.comunidade-banner-botao:hover {
+  background-color: var(--terrahover);
+}
+
+.comunidade-banner-botao:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.categorias-destaque {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  min-width: 0;
+  padding-left: clamp(20px, 3vw, 36px);
+  border-left: 1px solid #d7ccbc;
+}
+
+.categorias-destaque .titulo-secao {
+  flex-shrink: 0;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
+  gap: clamp(12px, 1.8vw, 24px) clamp(8px, 1.2vw, 16px);
+  margin-block: auto;
+}
+
+.categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: clamp(82px, 8vw, 100px);
+  padding: 10px 5px;
+  border-radius: clamp(12px, 1.5vw, 18px);
+  background-color: var(--destaque);
+  color: var(--grafite);
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.categoria:hover {
+  transform: translateY(-3px);
+  background-color: var(--destaquehover);
+}
+
+.categoria-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7px;
+}
+
+.categoria-icon img {
+  width: clamp(24px, 2.5vw, 32px);
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.categoria h3,
+.categoria p {
+  max-width: 100%;
+  font-size: clamp(0.75rem, 0.95vw, 1rem);
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}
+
+.categoria h3 {
+  font-weight: 700;
+}
+
+.categoria p {
+  font-weight: 400;
+}
+
+.categoria:focus-visible {
+  outline: 2px solid var(--verde);
+  outline-offset: 3px;
 }
