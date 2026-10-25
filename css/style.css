@@ -1,3 +1,10 @@
+:root {
+  --verde: #285943;
+  --creme: #f4ebdd;
+  --terracota: #d8754b;
+  --grafite: #282b28;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +20,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 25px;
-  background-color: #285943;
+  background-color: var(--verde);
   z-index: 1000;
 }
 
@@ -37,7 +44,7 @@
   text-decoration: underline;
   text-underline-offset: 4px;
   transform: scale(1.05);
-  color: #f4ebdd;
+  color: var(--creme);
 }
 
 .btn-icone {
@@ -52,6 +59,100 @@
 }
 
 .btn-icone:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
+main {
+  background-color: var(--creme);
+}
+
+.introducao {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: "Afacad Flux", sans-serif;
+  color: var(--grafite);
+  min-height: 420px;
+  padding: 32px 48px;
+  overflow: hidden;
+  background-color: var(--creme);
+  border-top: 10px solid var(--verde);
+}
+
+.introducao-imagem {
+  position: absolute;
+  inset: 0 0 0 40%;
+  background-image:
+    linear-gradient(
+      to right,
+      var(--creme) 0%,
+      rgba(244, 235, 221, 0.95) 10%,
+      rgba(244, 235, 221, 0.55) 40%,
+      rgba(244, 235, 221, 0) 60%
+    ),
+    url("../assets/img/comunidade.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.introducao-conteudo {
+  position: relative;
+  z-index: 1;
+  width: 55%;
+  max-width: 680px;
+}
+
+.introducao-conteudo h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 0.98;
+  margin-bottom: 14px;
+}
+
+.introducao-conteudo h2 {
+  color: var(--verde);
+  font-size: clamp(1.2rem, 2vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+.introducao-conteudo p {
+  max-width: 650px;
+  font-size: clamp(1.05rem, 1.7vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.introducao-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-width: 245px;
+  padding: 14px 22px;
+  background-color: var(--terracota);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 20px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.introducao-botao-icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.introducao-botao:hover {
+  background-color: #bd603b;
+  transform: translateY(-2px);
+}
