@@ -23,7 +23,7 @@
   top: 0;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
+  padding: 15px 25px;
   background-color: var(--verde);
   z-index: 1000;
 }
@@ -276,7 +276,7 @@ main {
 .comunidade-banner-conteudo p {
   max-width: 390px;
   margin-bottom: 12px;
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
   line-height: 1.5;
 }
 
@@ -321,8 +321,11 @@ main {
 
 .categorias-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
   gap: clamp(12px, 1.8vw, 24px) clamp(8px, 1.2vw, 16px);
+  justify-content: center;
+  margin-inline: auto;
+  margin-block: auto;
   margin-block: auto;
 }
 
@@ -381,4 +384,64 @@ main {
 .categoria:focus-visible {
   outline: 2px solid var(--verde);
   outline-offset: 3px;
+}
+
+.rodape {
+  background-color: var(--verde);
+  color: #ffffff;
+  font-size: 1rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr 3fr;
+  padding: 15px 25px;
+}
+
+.rodape a {
+  color: #ffffff;
+  text-decoration: none; 
+}
+
+.rodape .contato a:hover {
+  text-decoration: underline;
+}
+
+.dados {
+  line-height: 2rem;
+}
+
+.ajuda {
+  font-weight: 700;
+}
+
+.contato {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.btn-icon-rodape {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.2s ease;
+}
+
+.btn-icon-rodape:hover {
+  transform: scale(1.1);
+}
+
+.icons {
+  display: inline-flex;
+  gap: 0.7rem;
+}
+
+.redes-sociais-e-direitos {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+  align-items: flex-end;
 }
