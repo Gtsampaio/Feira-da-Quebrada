@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Produtos e Serviços | Feira da Quebrada</title>
+    <meta
+      name="description"
+      content="Explore o catálogo da Feira da Quebrada e encontre produtos e serviços de empreendedores locais da sua comunidade."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Nunito:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/catalogo.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="logo"><img src="../assets/icons/logo.svg" alt="logo" /></div>
+      <nav class="navegacao">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="#">Cadastro</a></li>
+          <li>
+            <button
+              type="button"
+              class="btn-icone"
+              aria-label="Carrinho de compras"
+            >
+              <img src="../assets/icons/carrinho.svg" alt="" aria-hidden="true" />
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn-icone" aria-label="Pesquisar">
+              <img src="../assets/icons/lupa.svg" alt="" aria-hidden="true" />
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="catalogo">
+      <section class="catalogo-cabecalho">
+        <div class="catalogo-intro">
+          <div>
+            <h1>Catálogo</h1>
+            <p>Encontre produtos e serviços da nossa comunidade</p>
+          </div>
+          <a href="cadastro.html" class="botao-cadastrar">
+            <span aria-hidden="true">+</span>
+            Cadastrar produto
+          </a>
+        </div>
+        <form class="busca" role="search" id="form-busca">
+          <input
+            type="search"
+            id="buscar-produtos"
+            placeholder="Buscar produtos..."
+            aria-label="Buscar produtos"
+          />
+          <button type="submit" aria-label="Pesquisar">
+            <img src="../assets/icons/pesquisar.svg" alt="" />
+          </button>
+        </form>
+        <nav class="filtros" aria-label="Filtrar produtos por categoria">
+          <button class="filtro ativo" type="button" data-categoria="Todas">
+            Todas
+          </button>
+          <button
+            class="filtro"
+            type="button"
+            data-categoria="Alimentos e bebidas"
+          >
+            Alimentos
+          </button>
+          <button
+            class="filtro"
+            type="button"
+            data-categoria="Moda e acessórios"
+          >
+            Moda
+          </button>
+          <button
+            class="filtro"
+            type="button"
+            data-categoria="Beleza e cuidados"
+          >
+            Beleza
+          </button>
+          <button
+            class="filtro"
+            type="button"
+            data-categoria="Artesanato e decoração"
+          >
+            Artesanato
+          </button>
+          <button class="filtro" type="button" data-categoria="Serviços">
+            Serviços
+          </button>
+          <button class="filtro" type="button" data-categoria="Pets">
+            Pets
+          </button>
+        </nav>
+      </section>
+      <section class="catalogo-conteudo" aria-label="Produtos disponíveis">
+        <div class="produtos-grid" id="produtos-grid"></div>
+        <p class="mensagem-vazia" id="mensagem-vazia" hidden>
+          Nenhum produto encontrado.
+        </p>
+        <nav
+          class="paginacao"
+          id="paginacao"
+          aria-label="Paginação do catálogo"
+        >
+          <button
+            class="pagina-seta"
+            id="pagina-anterior"
+            type="button"
+            aria-label="Página anterior"
+          >
+            ‹
+          </button>
+          <div class="paginas-numeros" id="paginas-numeros"></div>
+          <button
+            class="pagina-seta"
+            id="pagina-proxima"
+            type="button"
+            aria-label="Próxima página"
+          >
+            ›
+          </button>
+        </nav>
+      </section>
+    </main>
+    <script src="../js/catalogo.js"></script>
+  </body>
+</html>
