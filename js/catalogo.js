@@ -73,6 +73,13 @@ let categoriaAtual = "Todas";
 let termoBusca = "";
 let paginaAtual = 1;
 
+const parametrosURL = new URLSearchParams(window.location.search);
+const categoriaURL = parametrosURL.get("categoria");
+
+if (categoriaURL) {
+    categoriaAtual = categoriaURL;
+}
+
 function obterProdutosFiltrados() {
   return produtos.filter((produto) => {
     const correspondeCategoria =
@@ -223,6 +230,13 @@ proxima.addEventListener("click", () => {
     paginaAtual++;
     renderizarProdutos();
   }
+});
+
+filtros.forEach((filtro) => {
+    filtro.classList.toggle(
+        "ativo",
+        filtro.dataset.categoria === categoriaAtual
+    );
 });
 
 renderizarProdutos();
