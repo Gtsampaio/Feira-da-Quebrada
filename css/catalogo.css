@@ -304,45 +304,137 @@
 }
 
 .produtos-grid.animando .produto-card {
-    animation: aparecerProduto 0.35s ease both;
+  animation: aparecerProduto 0.35s ease both;
 }
 
 .produtos-grid.animando .produto-card:nth-child(2) {
-    animation-delay: 0.04s;
+  animation-delay: 0.04s;
 }
 
 .produtos-grid.animando .produto-card:nth-child(3) {
-    animation-delay: 0.08s;
+  animation-delay: 0.08s;
 }
 
 .produtos-grid.animando .produto-card:nth-child(4) {
-    animation-delay: 0.12s;
+  animation-delay: 0.12s;
 }
 
 .produtos-grid.animando .produto-card:nth-child(5) {
-    animation-delay: 0.16s;
+  animation-delay: 0.16s;
 }
 
 .produtos-grid.animando .produto-card:nth-child(6) {
-    animation-delay: 0.20s;
+  animation-delay: 0.2s;
 }
 
 .produtos-grid.animando .produto-card:nth-child(7) {
-    animation-delay: 0.24s;
+  animation-delay: 0.24s;
 }
 
 .produtos-grid.animando .produto-card:nth-child(8) {
-    animation-delay: 0.28s;
+  animation-delay: 0.28s;
 }
 
 @keyframes aparecerProduto {
-    from {
-        opacity: 0;
-        transform: translateY(12px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .catalogo {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .produtos-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .filtros-categorias {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogo {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .catalogo-intro {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .busca-container {
+    width: 100%;
+  }
+
+  .produtos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .filtros-categorias {
+    justify-content: flex-start;
+  }
+
+  .paginacao {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalogo {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .catalogo-intro {
+    align-items: flex-start;
+  }
+
+  .busca-container,
+  .busca-container input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .produtos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .produto-card {
+    min-width: 0;
+  }
+
+  .produto-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .produto-card h3,
+  .produto-card p {
+    overflow-wrap: anywhere;
+  }
+
+  .filtros-categorias {
+    gap: 8px;
+  }
+
+  .paginacao {
+    justify-content: center;
+  }
 }
