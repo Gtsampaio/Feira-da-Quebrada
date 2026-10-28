@@ -46,5 +46,127 @@
         </ul>
       </nav>
     </header>
+    <main class="cadastro">
+      <section class="cadastro-apresentacao">
+        <div class="cadastro-apresentacao-titulo">
+          <div class="cadastro-icone-loja">
+            <img src="../assets/icons/loja-cadastro.svg" alt="" />
+          </div>
+          <h1>Cadastre seu<br />produto ou serviço</h1>
+        </div>
+        <p class="cadastro-texto">
+          Preencha as informações ao lado para divulgar seu negócio na nossa
+          comunidade.
+        </p>
+        <ul class="cadastro-beneficios">
+          <li>É rápido e fácil</li>
+          <li>Ajuda a divulgar seu trabalho</li>
+          <li>Fortalece o comércio local</li>
+        </ul>
+        <div class="cadastro-mensagem">
+          <img src="../assets/icons/slogan.svg" alt="" />
+        </div>
+      </section>
+      <section class="cadastro-formulario">
+        <h2>Informações do produto/serviço</h2>
+        <form id="form-cadastro-produto">
+          <div class="cadastro-campos">
+            <div class="campo">
+              <label for="nome-produto">
+                Nome do produto/serviço<span>*</span>
+              </label>
+              <input
+                type="text"
+                id="nome-produto"
+                name="nome-produto"
+                placeholder="Ex.: Aprendo a fazer um site simples"
+              />
+            </div>
+            <div class="campo">
+              <label for="categoria"> Categoria<span>*</span> </label>
+              <select id="categoria" name="categoria">
+                <option value="" selected disabled>
+                  Selecione uma categoria
+                </option>
+                <option value="Alimentos e bebidas">Alimentos e bebidas</option>
+                <option value="Moda e acessórios">Moda e acessórios</option>
+                <option value="Beleza e cuidados">Beleza e cuidados</option>
+                <option value="Artesanato e decoração">
+                  Artesanato e decoração
+                </option>
+                <option value="Serviços">Serviços</option>
+                <option value="Pets">Pets</option>
+              </select>
+            </div>
+            <div class="campo campo-largo">
+              <label for="descricao"> Descrição<span>*</span> </label>
+              <textarea
+                id="descricao"
+                name="descricao"
+                placeholder="Conte mais sobre o seu produto ou serviço..."
+              ></textarea>
+            </div>
+            <div class="campo">
+              <label for="preco"> Preço (R$)<span>*</span> </label>
+              <input
+                type="number"
+                id="preco"
+                name="preco"
+                min="0"
+                step="0.01"
+                placeholder="Ex.: 25,00"
+              />
+            </div>
+            <div class="campo">
+              <label for="empreendedor">
+                Nome do empreendedor<span>*</span>
+              </label>
+              <input
+                type="text"
+                id="empreendedor"
+                name="empreendedor"
+                placeholder="Ex.: Alexandre Ferreira"
+              />
+            </div>
+            <div class="campo campo-largo">
+              <label for="imagem-produto">Imagem do produto</label>
+              <input
+                type="file"
+                id="imagem-produto"
+                name="imagem-produto"
+                accept=".jpg,.jpeg,.png"
+              />
+              <small
+                >Formatos aceitos: JPG, JPEG e PNG. Tamanho máximo: 2000
+                px.</small
+              >
+            </div>
+            <div class="campo campo-largo">
+              <label for="contato"> Contato<span>*</span> </label>
+              <input
+                type="tel"
+                id="contato"
+                name="contato"
+                placeholder="Ex.: 11999999999 ou @usuario"
+              />
+            </div>
+          </div>
+          <div class="cadastro-acoes">
+            <a href="catalogo.html" class="botao-cancelar">
+              <img src="../assets/icons/voltar.svg" alt="" />
+              <span>Cancelar</span>
+            </a>
+            <button
+              type="button"
+              class="botao-cadastrar"
+              onclick="window.location.href = 'aguardando-aprovacao.html'"
+            >
+              <img src="../assets/icons/lapis.svg" alt="" />
+              <span>Cadastrar produto</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
