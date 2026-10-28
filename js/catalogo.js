@@ -55,6 +55,90 @@ const produtos = [
     preco: 35,
     imagem: "../assets/img/cachorro.jpg",
   },
+  {
+    id: 9,
+    nome: "Aulas de inglês básico",
+    categoria: "Serviços",
+    preco: 80,
+    imagem: "../assets/img/aula-ingles.jpg",
+  },
+  {
+    id: 10,
+    nome: "Maquiagem importada",
+    categoria: "Beleza e cuidados",
+    preco: 65,
+    imagem: "../assets/img/maquiagem-importada.jpg",
+  },
+  {
+    id: 11,
+    nome: "Frutas frescas (por kg)",
+    categoria: "Alimentos e bebidas",
+    preco: 10,
+    imagem: "../assets/img/frutas-frescas.jpg",
+  },
+  {
+    id: 12,
+    nome: "Revisão preventiva",
+    categoria: "Serviços",
+    preco: 200,
+    imagem: "../assets/img/revisao-preventiva.jpg",
+  },
+  {
+    id: 13,
+    nome: "Bolsas personalizadas",
+    categoria: "Artesanato e decoração",
+    preco: 35,
+    imagem: "../assets/img/bolsas-personalizadas.jpg",
+  },
+  {
+    id: 14,
+    nome: "Velas aromatizadas",
+    categoria: "Artesanato e decoração",
+    preco: 23,
+    imagem: "../assets/img/velas-aromatizadas.jpg",
+  },
+  {
+    id: 15,
+    nome: "Café da manhã",
+    categoria: "Alimentos e bebidas",
+    preco: 12,
+    imagem: "../assets/img/cafe-manha.jpg",
+  },
+  {
+    id: 16,
+    nome: "Banho e tosa",
+    categoria: "Pets",
+    preco: 40,
+    imagem: "../assets/img/banho-tosa.jpg",
+  },
+  {
+    id: 17,
+    nome: "Ensaio fotográfico",
+    categoria: "Serviços",
+    preco: 120,
+    imagem: "../assets/img/ensaio-fotografico.jpg",
+  },
+  {
+    id: 18,
+    nome: "Tênis da moda",
+    categoria: "Moda e acessórios",
+    preco: 185,
+    imagem: "../assets/img/tenis-moda.jpg",
+  },
+  {
+    id: 19,
+    nome: "Pizza caseira",
+    categoria: "Alimentos e bebidas",
+    preco: 60,
+    imagem: "../assets/img/pizza-caseira.jpg",
+  },
+  {
+    id: 20,
+    nome: "Camisas de verão",
+    categoria: "Moda e acessórios",
+    preco: 25,
+    imagem: "../assets/img/camisas-verao.jpg",
+  },
 ];
 
 const produtosPorPagina = 8;
@@ -77,7 +161,7 @@ const parametrosURL = new URLSearchParams(window.location.search);
 const categoriaURL = parametrosURL.get("categoria");
 
 if (categoriaURL) {
-    categoriaAtual = categoriaURL;
+  categoriaAtual = categoriaURL;
 }
 
 function obterProdutosFiltrados() {
@@ -233,10 +317,7 @@ proxima.addEventListener("click", () => {
 });
 
 filtros.forEach((filtro) => {
-    filtro.classList.toggle(
-        "ativo",
-        filtro.dataset.categoria === categoriaAtual
-    );
+  filtro.classList.toggle("ativo", filtro.dataset.categoria === categoriaAtual);
 });
 
 renderizarProdutos();
