@@ -1,6 +1,21 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--creme);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 .cadastro {
   display: grid;
   grid-template-columns: 32% 1fr;
+  align-content: center;
   gap: 12px;
   width: 100%;
   max-width: 1440px;
