@@ -159,15 +159,38 @@
             <button
               type="button"
               class="botao-cadastrar"
-              onclick="window.location.href = 'aguardando-aprovacao.html'"
+              popovertarget="caixa-aprovacao"
             >
               <img src="../assets/icons/lapis.svg" alt="" />
               <span>Cadastrar produto</span>
             </button>
+
+            <div id="caixa-aprovacao" class="caixa-aprovacao" popover>
+              <div class="aprovacao-titulo">
+                <img src="../assets/icons/coroa.svg" alt="" />
+                <h2>Obrigado por escolher a nossa plataforma!</h2>
+              </div>
+
+              <div class="aprovacao-mensagem">
+                <p>
+                  O cadastro do seu produto/serviço foi realizado com sucesso e
+                  já está em fase de análise. Para garantir que você não perca
+                  nenhum detalhe, fique atento à sua caixa de entrada (e à pasta
+                  de spam, se for o caso).
+                </p>
+
+                <p>Em breve teremos novidades!</p>
+              </div>
+
+              <a href="../index.html" class="aprovacao-voltar">
+                Voltar ao início
+              </a>
+            </div>
           </div>
         </form>
       </section>
     </main>
+
     <footer class="rodape">
       <div class="logo-rodape">
         <img src="../assets/icons/logo.svg" alt="Logo Feira da Quebrada" />
