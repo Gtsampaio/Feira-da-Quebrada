@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -292,6 +293,83 @@ main {
   background-color: var(--terrahover);
 }
 
+.caixa-aprovacao {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: calc(100% - 32px);
+  max-width: 50%;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--verde);
+  color: #ffffff;
+  box-shadow: 6px 7px 0 rgba(40, 43, 40, 0.3);
+}
+
+.caixa-aprovacao::backdrop {
+  background-color: rgba(40, 43, 40, 0.45);
+}
+
+.aprovacao-titulo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 1rem;
+}
+
+.aprovacao-titulo img {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.aprovacao-titulo h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.aprovacao-mensagem {
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+
+.aprovacao-mensagem p {
+  margin: 0 0 20px;
+}
+
+.aprovacao-mensagem p:last-child {
+  margin-bottom: 3rem;
+}
+
+.aprovacao-voltar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-height: 1.5rem;
+  margin: 0 auto;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: var(--terracota);
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.aprovacao-voltar:hover {
+  background-color: var(--terrahover);
+}
+
 @media (max-width: 900px) {
   .cadastro {
     grid-template-columns: 1fr;
@@ -313,6 +391,12 @@ main {
 
   .cadastro-formulario {
     padding: 20px;
+  }
+}
+
+@media (max-width: 770px) {
+  .caixa-aprovacao {
+    max-width: 80%;
   }
 }
 
@@ -357,5 +441,29 @@ main {
   .cadastro-acoes {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .aprovacao-voltar {
+  width: fit-content;
+  }
+}
+
+@media (max-width: 360px) {
+  .caixa-aprovacao {
+    max-width: 280px;
+    padding: 19px;
+  }
+
+  .aprovacao-titulo h2 {
+    font-size: 13px;
+  }
+
+  .aprovacao-mensagem {
+    font-size: 12px;
+  }
+
+  .aprovacao-voltar {
+    font-size: 12px;
+    min-height: 30px;
   }
 }
