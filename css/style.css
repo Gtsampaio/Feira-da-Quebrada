@@ -295,6 +295,7 @@ main {
   text-decoration: none;
   overflow-wrap: break-word;
   transition: background-color 0.2s ease;
+  border: none;
 }
 
 .comunidade-banner-botao:hover {
