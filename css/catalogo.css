@@ -1,5 +1,4 @@
 .catalogo {
-  min-height: 100vh;
   padding: 20px clamp(20px, 5vw, 40px) 16px;
   background-color: var(--creme);
   color: var(--grafite);

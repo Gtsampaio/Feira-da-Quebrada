@@ -18,128 +18,102 @@
     <link rel="stylesheet" href="../css/catalogo.css" />
   </head>
   <body>
-    <header class="cabecalho">
-      <div class="logo"><img src="../assets/icons/logo.svg" alt="logo" /></div>
-      <nav class="navegacao">
-        <ul>
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="#">Catálogo</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-          <li>
-            <button
-              type="button"
-              class="btn-icone"
-              aria-label="Carrinho de compras"
-            >
-              <img
-                src="../assets/icons/carrinho.svg"
-                alt=""
-                aria-hidden="true"
-              />
-            </button>
-          </li>
-          <li>
-            <button type="button" class="btn-icone" aria-label="Pesquisar">
-              <img src="../assets/icons/lupa.svg" alt="" aria-hidden="true" />
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <header id="cabecalho"></header>
     <main class="catalogo">
-      <section class="catalogo-cabecalho">
-        <div class="catalogo-intro">
-          <div>
-            <h1>Catálogo</h1>
-            <p>Encontre produtos e serviços da nossa comunidade</p>
+      <div class="container">
+        <section class="catalogo-cabecalho">
+          <div class="catalogo-intro">
+            <div>
+              <h1>Catálogo</h1>
+              <p>Encontre produtos e serviços da nossa comunidade</p>
+            </div>
+            <a href="cadastro.html" class="botao-cadastrar">
+              <span aria-hidden="true">+</span>
+              Cadastrar produto
+            </a>
           </div>
-          <a href="cadastro.html" class="botao-cadastrar">
-            <span aria-hidden="true">+</span>
-            Cadastrar produto
-          </a>
-        </div>
-        <form class="busca" role="search" id="form-busca">
-          <input
-            type="search"
-            id="buscar-produtos"
-            placeholder="Buscar produtos..."
-            aria-label="Buscar produtos"
-          />
-          <button type="submit" aria-label="Pesquisar">
-            <img src="../assets/icons/pesquisar.svg" alt="" />
-          </button>
-        </form>
-        <nav class="filtros" aria-label="Filtrar produtos por categoria">
-          <button class="filtro ativo" type="button" data-categoria="Todas">
-            Todas
-          </button>
-          <button
-            class="filtro"
-            type="button"
-            data-categoria="Alimentos e bebidas"
+          <form class="busca" role="search" id="form-busca">
+            <input
+              type="search"
+              id="buscar-produtos"
+              placeholder="Buscar produtos..."
+              aria-label="Buscar produtos"
+            />
+            <button type="submit" aria-label="Pesquisar">
+              <img src="../assets/icons/pesquisar.svg" alt="" />
+            </button>
+          </form>
+          <nav class="filtros" aria-label="Filtrar produtos por categoria">
+            <button class="filtro ativo" type="button" data-categoria="Todas">
+              Todas
+            </button>
+            <button
+              class="filtro"
+              type="button"
+              data-categoria="Alimentos e bebidas"
+            >
+              Alimentos
+            </button>
+            <button
+              class="filtro"
+              type="button"
+              data-categoria="Moda e acessórios"
+            >
+              Moda
+            </button>
+            <button
+              class="filtro"
+              type="button"
+              data-categoria="Beleza e cuidados"
+            >
+              Beleza
+            </button>
+            <button
+              class="filtro"
+              type="button"
+              data-categoria="Artesanato e decoração"
+            >
+              Artesanato
+            </button>
+            <button class="filtro" type="button" data-categoria="Serviços">
+              Serviços
+            </button>
+            <button class="filtro" type="button" data-categoria="Pets">
+              Pets
+            </button>
+          </nav>
+        </section>
+        <section class="catalogo-conteudo" aria-label="Produtos disponíveis">
+          <div class="produtos-grid" id="produtos-grid"></div>
+          <p class="mensagem-vazia" id="mensagem-vazia" hidden>
+            Nenhum produto encontrado.
+          </p>
+          <nav
+            class="paginacao"
+            id="paginacao"
+            aria-label="Paginação do catálogo"
           >
-            Alimentos
-          </button>
-          <button
-            class="filtro"
-            type="button"
-            data-categoria="Moda e acessórios"
-          >
-            Moda
-          </button>
-          <button
-            class="filtro"
-            type="button"
-            data-categoria="Beleza e cuidados"
-          >
-            Beleza
-          </button>
-          <button
-            class="filtro"
-            type="button"
-            data-categoria="Artesanato e decoração"
-          >
-            Artesanato
-          </button>
-          <button class="filtro" type="button" data-categoria="Serviços">
-            Serviços
-          </button>
-          <button class="filtro" type="button" data-categoria="Pets">
-            Pets
-          </button>
-        </nav>
-      </section>
-      <section class="catalogo-conteudo" aria-label="Produtos disponíveis">
-        <div class="produtos-grid" id="produtos-grid"></div>
-        <p class="mensagem-vazia" id="mensagem-vazia" hidden>
-          Nenhum produto encontrado.
-        </p>
-        <nav
-          class="paginacao"
-          id="paginacao"
-          aria-label="Paginação do catálogo"
-        >
-          <button
-            class="pagina-seta"
-            id="pagina-anterior"
-            type="button"
-            aria-label="Página anterior"
-          >
-            ‹
-          </button>
-          <div class="paginas-numeros" id="paginas-numeros"></div>
-          <button
-            class="pagina-seta"
-            id="pagina-proxima"
-            type="button"
-            aria-label="Próxima página"
-          >
-            ›
-          </button>
-        </nav>
-      </section>
+            <button
+              class="pagina-seta"
+              id="pagina-anterior"
+              type="button"
+              aria-label="Página anterior"
+            >
+              ‹
+            </button>
+            <div class="paginas-numeros" id="paginas-numeros"></div>
+            <button
+              class="pagina-seta"
+              id="pagina-proxima"
+              type="button"
+              aria-label="Próxima página"
+            >
+              ›
+            </button>
+          </nav>
+        </section>
+      </div>
     </main>
-    <script type="module" src="../js/catalogo.js"></script>
     <footer class="rodape">
       <div class="logo-rodape">
         <img src="../assets/icons/logo.svg" alt="Logo Feira da Quebrada" />
@@ -152,9 +126,9 @@
             Email:
             <a href="mailto:feiradaquebradaturma11@gmail.com"
               >feiradaquebradaturma11@gmail.com</a
-            >
-          </p>
-        </div>
+              >
+            </p>
+          </div>
       </div>
       <div class="redes-sociais-e-direitos">
         <nav class="icons" aria-label="Redes sociais">
@@ -164,20 +138,20 @@
             aria-label="Ir para o Instagram"
             target="_blank"
             rel="noopener noreferrer"
-          >
+            >
             <img
-              src="../assets/icons/instagram.svg"
-              alt=""
-              aria-hidden="true"
+            src="../assets/icons/instagram.svg"
+            alt=""
+            aria-hidden="true"
             />
           </a>
           <a
-            href="https://twitter.com"
+          href="https://twitter.com"
             class="btn-icon-rodape"
             aria-label="Ir para o Twitter"
             target="_blank"
             rel="noopener noreferrer"
-          >
+            >
             <img src="../assets/icons/twitter.svg" alt="" aria-hidden="true" />
           </a>
           <a
@@ -186,16 +160,16 @@
             aria-label="Ir para o TikTok"
             target="_blank"
             rel="noopener noreferrer"
-          >
+            >
             <img src="../assets/icons/tiktok.svg" alt="" aria-hidden="true" />
           </a>
           <a
-            href="https://wa.me"
+          href="https://wa.me"
             class="btn-icon-rodape"
             aria-label="Conversar no WhatsApp"
             target="_blank"
             rel="noopener noreferrer"
-          >
+            >
             <img src="../assets/icons/whatsapp.svg" alt="" aria-hidden="true" />
           </a>
         </nav>
@@ -204,5 +178,8 @@
         </div>
       </div>
     </footer>
+    <script type="module" src="../js/catalogo.js"></script>
+    <script type="module" src="../js/script.js"></script>
   </body>
-</html>
+  </html>
+  

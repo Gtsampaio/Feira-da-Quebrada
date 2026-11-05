@@ -18,34 +18,7 @@
     <link rel="stylesheet" href="../css/cadastro.css" />
   </head>
   <body>
-    <header class="cabecalho">
-      <div class="logo"><img src="../assets/icons/logo.svg" alt="logo" /></div>
-      <nav class="navegacao">
-        <ul>
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="catalogo.html">Catálogo</a></li>
-          <li><a href="#">Cadastro</a></li>
-          <li>
-            <button
-              type="button"
-              class="btn-icone"
-              aria-label="Carrinho de compras"
-            >
-              <img
-                src="../assets/icons/carrinho.svg"
-                alt=""
-                aria-hidden="true"
-              />
-            </button>
-          </li>
-          <li>
-            <button type="button" class="btn-icone" aria-label="Pesquisar">
-              <img src="../assets/icons/lupa.svg" alt="" aria-hidden="true" />
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <header id="cabecalho"></header>
     <main class="cadastro">
       <section class="cadastro-apresentacao">
         <div class="cadastro-apresentacao-titulo">
@@ -164,13 +137,11 @@
               <img src="../assets/icons/lapis.svg" alt="" />
               <span>Cadastrar produto</span>
             </button>
-
             <div id="caixa-aprovacao" class="caixa-aprovacao" popover>
               <div class="aprovacao-titulo">
                 <img src="../assets/icons/coroa.svg" alt="" />
                 <h2>Obrigado por escolher a nossa plataforma!</h2>
               </div>
-
               <div class="aprovacao-mensagem">
                 <p>
                   O cadastro do seu produto/serviço foi realizado com sucesso e
@@ -178,10 +149,8 @@
                   nenhum detalhe, fique atento à sua caixa de entrada (e à pasta
                   de spam, se for o caso).
                 </p>
-
                 <p>Em breve teremos novidades!</p>
               </div>
-
               <a href="../index.html" class="aprovacao-voltar">
                 Voltar ao início
               </a>
@@ -190,7 +159,6 @@
         </form>
       </section>
     </main>
-
     <footer class="rodape">
       <div class="logo-rodape">
         <img src="../assets/icons/logo.svg" alt="Logo Feira da Quebrada" />
@@ -255,5 +223,6 @@
         </div>
       </div>
     </footer>
+    <script type="module" src="../js/script.js"></script>
   </body>
 </html>

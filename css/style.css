@@ -17,15 +17,41 @@
   font-family: "Afacad Flux", sans-serif;
 }
 
-.cabecalho {
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--creme);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+#cabecalho {
+  background-color: var(--verde);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container-cabecalho {
   display: flex;
   position: sticky;
   top: 0;
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-  background-color: var(--verde);
   z-index: 1000;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .navegacao ul {
