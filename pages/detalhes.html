@@ -46,5 +46,70 @@
         </ul>
       </nav>
     </header>
+    <main class="pagina-detalhes">
+      <a href="catalogo.html" class="voltar-catalogo">
+        <span class="seta-voltar">←</span>
+        Voltar para o catálogo
+      </a>
+      <section class="detalhes-produto" id="detalhes-produto">
+        <div class="galeria-produto">
+          <img src="" alt="" class="imagem-principal" id="imagem-principal" />
+          <div class="miniaturas" id="miniaturas">
+          </div>
+        </div>
+        <div class="informacoes-produto">
+          <h1 id="nome-produto"></h1>
+          <span class="categoria-produto" id="categoria-produto"></span>
+          <p class="preco-produto" id="preco-produto"></p>
+          <p class="descricao-produto" id="descricao-produto"></p>
+          <div class="informacao-item">
+            <div class="icone-informacao">
+              <img src="../assets/icons/usuario.svg" alt="" />
+            </div>
+            <div>
+              <span class="titulo-informacao">Empreendedor</span>
+              <p id="empreendedor-produto"></p>
+            </div>
+          </div>
+          <div class="informacao-item">
+            <div class="icone-informacao">
+              <img src="../assets/icons/telefone.svg" alt="" />
+            </div>
+            <div>
+              <span class="titulo-informacao">Contato</span>
+              <p id="contato-produto"></p>
+            </div>
+          </div>
+          <div class="informacao-item">
+            <div class="icone-informacao">
+              <img src="../assets/icons/entrega.svg" alt="" />
+            </div>
+            <div>
+              <span class="titulo-informacao">Entrega</span>
+              <p id="entrega-produto"></p>
+            </div>
+          </div>
+          <div class="acoes-produto">
+            <a href="#" class="botao-editar" id="botao-editar"> <img src="../assets/icons/lapis.svg" alt=""> Editar </a>
+            <button type="button" class="botao-excluir" id="botao-excluir">
+              Excluir
+            </button>
+          </div>
+        </div>
+      </section>
+      <aside class="dica-produto">
+        <div class="icone-dica">
+          <img src="../assets/icons/loja-detalhes.svg" alt="" />
+        </div>
+        <div class="texto-dica">
+          <h2>Dica</h2>
+          <p>
+            Entre em contato com o empreendedor para confirmar a disponibilidade
+            e o prazo de entrega.
+          </p>
+        </div>
+      </aside>
+    </main>
+    <script type="module" src="../js/detalhes.js"></script>
   </body>
 </html>
