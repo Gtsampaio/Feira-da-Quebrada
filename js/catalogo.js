@@ -73,7 +73,7 @@ function renderizarProdutos() {
                 aria-label="Ver detalhes de ${produto.nome}"
             >
                 <img
-                    src="${produto.imagem}"
+                    src="${produto.imagens?.[0]}"
                     alt="${produto.nome}"
                     loading="lazy"
                 >

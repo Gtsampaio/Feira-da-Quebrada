@@ -474,7 +474,7 @@ main {
 }
 
 @media (max-width: 1024px) {
-  .cabecalho {
+  .container-cabecalho {
     padding: 14px 20px;
   }
 
@@ -551,7 +551,7 @@ main {
 }
 
 @media (max-width: 768px) {
-  .cabecalho {
+  .container-cabecalho {
     flex-wrap: wrap;
     gap: 14px;
     padding: 14px 20px;
@@ -709,7 +709,7 @@ main {
 }
 
 @media (max-width: 480px) {
-  .cabecalho {
+  .container-cabecalho {
     flex-direction: column;
     justify-content: center;
     gap: 12px;
