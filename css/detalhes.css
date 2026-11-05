@@ -1,5 +1,16 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: var(--creme);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 .pagina-detalhes {
@@ -236,10 +247,72 @@ body {
 
 .produto-nao-encontrado {
   padding: 40px 15px;
+  align-content: center;
   text-align: center;
   color: #555;
+  font-size: 1.5rem;
 }
 
 .produto-nao-encontrado a {
   color: var(--verde);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .pagina-detalhes {
+    padding: 20px 16px;
+  }
+
+  .detalhes-produto {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .galeria-produto {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .imagem-principal, .miniatura {
+    height: 70%;
+  }
+
+  .miniaturas {
+    padding: 0;
+  }
+
+  .informacoes-produto {
+    padding: 0;
+  }
+
+  .informacoes-produto h1 {
+    font-size: 1.5rem;
+  }
+
+  .acoes-produto {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .imagem-principal {
+    height: 220px;
+  }
+
+  .miniaturas {
+    gap: 8px;
+  }
+
+  .miniatura {
+    height: 58px;
+  }
+
+  .dica-produto {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .texto-dica p {
+    line-height: 1.5;
+  }
 }
