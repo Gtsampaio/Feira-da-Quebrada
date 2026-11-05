@@ -1,0 +1,245 @@
+body {
+  background-color: var(--creme);
+}
+
+.pagina-detalhes {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 28px;
+  box-sizing: border-box;
+}
+
+.voltar-catalogo {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+  color: var(--verde);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.seta-voltar {
+  font-size: 1.8rem;
+}
+
+.voltar-catalogo:hover {
+  opacity: 0.75;
+}
+
+.detalhes-produto {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  gap: 24px;
+  padding: 12px;
+  border: 1px solid #789582;
+  border-radius: 7px;
+  background-color: var(--creme);
+  box-sizing: border-box;
+}
+
+.galeria-produto {
+  min-width: 0;
+  padding-right: 10px;
+  border-right: 2px solid #d8d8cc;
+}
+
+.imagem-principal {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.miniaturas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 25px;
+  padding: 0 16px;
+}
+
+.miniatura {
+  width: 100%;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    opacity 0.2s;
+}
+
+.miniatura:hover {
+  opacity: 0.8;
+}
+
+.miniatura.ativa {
+  border-color: var(--verde);
+}
+
+.informacoes-produto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 2px 10px 0 0;
+}
+
+.informacoes-produto h1 {
+  margin: 0 0 10px;
+  color: var(--grafite);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.categoria-produto {
+  display: inline-block;
+  padding: 5px 16px;
+  border: 1px solid #789582;
+  border-radius: 20px;
+  background-color: #d4dfd5;
+  color: var(--verde);
+  font-size: 0.8rem;
+}
+
+.preco-produto {
+  margin: 15px 0 10px;
+  color: var(--verde);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.descricao-produto {
+  max-width: 500px;
+  margin: 0 0 14px;
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.informacao-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 13px;
+}
+
+.icone-informacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #d4dfd5;
+}
+
+.icone-informacao img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.titulo-informacao {
+  color: #555;
+  font-size: 1rem;
+}
+
+.informacao-item p {
+  margin: 1px 0 0;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.acoes-produto {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.botao-editar,
+.botao-excluir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex: 1;
+  min-height: 36px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.botao-editar {
+  background-color: var(--verde);
+}
+
+.botao-excluir {
+  background-color: var(--terracota);
+}
+
+.botao-editar:hover,
+.botao-excluir:hover {
+  opacity: 0.85;
+}
+
+.dica-produto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 10px 16px;
+  border: 1px solid #789582;
+  border-radius: 7px;
+}
+
+.icone-dica {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #d4dfd5;
+}
+
+.icone-dica img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.texto-dica h2 {
+  margin: 0 0 3px;
+  color: var(--verde);
+  font-size: 1.2rem;
+}
+
+.texto-dica p {
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.produto-nao-encontrado {
+  padding: 40px 15px;
+  text-align: center;
+  color: #555;
+}
+
+.produto-nao-encontrado a {
+  color: var(--verde);
+}
