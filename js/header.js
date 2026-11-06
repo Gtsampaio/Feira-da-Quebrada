@@ -1,7 +1,11 @@
 export default function createHeader() {
   const header = document.getElementById("cabecalho");
   header.innerHTML = `<div class="container-cabecalho">
-        <div class="logo"><img src="/assets/icons/logo.svg" alt="logo" /></div>
+        <div class="logo">
+          <a href="/index.html">
+            <img src="/assets/icons/logo.svg" alt="logo" />
+          </a>
+        </div>
         <nav class="navegacao">
           <ul>
             <li><a href="../index.html">Início</a></li>
