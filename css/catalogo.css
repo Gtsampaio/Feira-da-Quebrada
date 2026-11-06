@@ -2,8 +2,6 @@
   padding: 20px clamp(20px, 5vw, 40px) 16px;
   background-color: var(--creme);
   color: var(--grafite);
-  border-top: 3px solid var(--verde);
-  border-bottom: 3px solid var(--verde);
 }
 
 .catalogo-intro {

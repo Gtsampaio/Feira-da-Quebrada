@@ -104,7 +104,6 @@ main {
   padding: 32px 48px;
   overflow: hidden;
   background-color: var(--destaque);
-  border-top: 10px solid var(--verde);
 }
 
 .introducao-imagem {
@@ -413,8 +412,14 @@ main {
   outline-offset: 3px;
 }
 
-.rodape {
+#rodape {
   background-color: var(--verde);
+}
+
+.rodape {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
   color: #ffffff;
   font-size: 1rem;
   display: grid;
