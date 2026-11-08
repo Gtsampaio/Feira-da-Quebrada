@@ -31,6 +31,7 @@ body {
 main {
   flex: 1;
   background-color: var(--creme);
+  align-content: center;
 }
 
 #cabecalho {
@@ -158,6 +159,83 @@ main {
   align-items: flex-end;
 }
 
+.caixa-popover {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: calc(100% - 32px);
+  max-width: 50%;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--verde);
+  color: #ffffff;
+  box-shadow: 6px 7px 0 rgba(40, 43, 40, 0.3);
+}
+
+.caixa-popover::backdrop {
+  background-color: rgba(40, 43, 40, 0.45);
+}
+
+.popover-titulo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 1rem;
+}
+
+.popover-titulo img {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.popover-titulo h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.popover-mensagem {
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+
+.popover-mensagem p {
+  margin: 0 0 20px;
+}
+
+.popover-mensagem p:last-child {
+  margin-bottom: 3rem;
+}
+
+.popover-voltar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-height: 1.5rem;
+  margin: 0 auto;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: var(--terracota);
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.popover-voltar:hover {
+  background-color: var(--terrahover);
+}
+
 @media (max-width: 1024px) {
   .container-cabecalho {
     padding: 14px 20px;
@@ -268,6 +346,16 @@ main {
   .direitos-autorais p {
     font-size: 0.85rem;
   }
+
+  .caixa-popover {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 520px) {
+  .popover-voltar {
+    width: fit-content;
+  }
 }
 
 @media (max-width: 480px) {
@@ -348,5 +436,23 @@ main {
 
   .navegacao ul a {
     font-size: 14px;
+  }
+
+  .caixa-popover {
+    max-width: 280px;
+    padding: 19px;
+  }
+
+  .popover-titulo h2 {
+    font-size: 13px;
+  }
+
+  .popover-mensagem {
+    font-size: 12px;
+  }
+
+  .popover-voltar {
+    font-size: 12px;
+    min-height: 30px;
   }
 }
