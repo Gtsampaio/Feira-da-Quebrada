@@ -322,4 +322,8 @@
   .pagina-apoio .voltar {
     flex-wrap: wrap;
   }
+  .pagina-apoio .botao-principal {
+    width: fit-content;
+    padding: 9px 16px;
+  }
 }

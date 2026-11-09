@@ -27,9 +27,6 @@ botaoCartao.addEventListener("click", mostrarCartao);
 function mostrarCartao() {
     apoioPix.classList.add("oculto");
     apoioCartao.classList.remove("oculto");
-    
-    definirObrigatoriedade(camposCartao, true);
-    valorDoacao = false;
 }
 
 botaoPix.addEventListener("click", mostrarPix);
