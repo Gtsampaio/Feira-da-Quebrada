@@ -1,0 +1,147 @@
+.pagina-obrigado {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 35px auto;
+  padding: 0 25px;
+}
+
+.pagina-obrigado .mensagem-obrigado {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 20px 22px;
+  background-color: #c3d2c9;
+  border-radius: 9px;
+}
+
+.pagina-obrigado .conteudo-obrigado h1 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: var(--grafite);
+}
+
+.pagina-obrigado .conteudo-obrigado p {
+  margin-bottom: 17px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--grafite);
+}
+
+.pagina-obrigado .acoes-obrigado {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pagina-obrigado .botao-voltar,
+.pagina-obrigado .botao-compartilhar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--terracota);
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.pagina-obrigado .botao-voltar {
+  background-color: transparent;
+  color: var(--grafite);
+  gap: 5px;
+}
+
+.pagina-obrigado .botao-compartilhar {
+  background-color: var(--terracota);
+  color: #ffffff;
+}
+
+.pagina-obrigado .botao-voltar:hover {
+  background-color: var(--terracota);
+  color: #ffffff;
+}
+
+.pagina-obrigado .botao-compartilhar:hover {
+  filter: brightness(0.92);
+}
+
+.pagina-obrigado .parceiro-oficial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 20px 18px;
+  background-color: #fae8c9;
+  border-radius: 9px;
+}
+
+.pagina-obrigado .parceiro-oficial h2 {
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--grafite);
+}
+
+.pagina-obrigado .beneficios-parceiro p {
+  margin-bottom: 13px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--grafite);
+}
+
+.pagina-obrigado .beneficios-parceiro p span {
+  color: var(--verde);
+}
+.pagina-obrigado .beneficios-parceiro strong {
+  font-weight: 800;
+}
+
+.pagina-obrigado .icone-slogan {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .pagina-obrigado {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .pagina-obrigado .mensagem-obrigado {
+    padding: 20px;
+  }
+
+  .pagina-obrigado .parceiro-oficial {
+    padding: 20px;
+  }
+
+  .pagina-obrigado .icone-slogan {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .pagina-obrigado .acoes-obrigado {
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-obrigado .conteudo-obrigado h1 {
+    font-size: 1.1rem;
+  }
+}
