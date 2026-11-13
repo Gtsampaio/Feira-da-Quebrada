@@ -1,0 +1,283 @@
+.pagina-parceiros {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 25px;
+  color: var(--grafite);
+}
+
+.pagina-parceiros .titulo-parceiros {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.pagina-parceiros .conteudo-parceiros {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 30px 35px;
+  align-items: stretch;
+}
+
+.pagina-parceiros .lista-parceiros {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pagina-parceiros .parceiro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagina-parceiros .imagem-parceiro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  padding: 7px;
+  border-radius: 9px;
+}
+
+.pagina-parceiros .imagem-tempero {
+  background-color: var(--verde);
+}
+
+.pagina-parceiros .imagem-petpampa {
+  background-color: var(--terracota);
+}
+
+.pagina-parceiros .imagem-parceiro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.pagina-parceiros .descricao-parceiro {
+  min-width: 0;
+}
+
+.pagina-parceiros .descricao-parceiro h2 {
+  margin-bottom: 4px;
+  font-size: 1.5rem;
+}
+
+.pagina-parceiros .descricao-parceiro p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.pagina-parceiros .impacto-parceiros {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1.5px solid var(--verde);
+  border-radius: 9px;
+  box-shadow: 8px 9px 0 rgba(40, 43, 40, 0.3);
+}
+
+.pagina-parceiros .impacto-parceiros ul {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.pagina-parceiros .impacto-parceiros li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagina-parceiros .impacto-parceiros li img {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.pagina-parceiros .impacto-parceiros li p {
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.pagina-parceiros .depoimento-parceiros {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  padding: 20px;
+  border: 1.5px solid var(--verde);
+  border-radius: 9px;
+  box-shadow: 8px 9px 0 rgba(40, 43, 40, 0.3);
+}
+
+.pagina-parceiros .texto-depoimento {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.pagina-parceiros .assinatura-depoimento img {
+  width: 40%;
+  display: flex;
+  justify-self: right;
+}
+
+.pagina-parceiros .outros-parceiros {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pagina-parceiros .parceiro-secundario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagina-parceiros .descricao-secundaria {
+  flex: 1;
+  min-width: 0;
+  text-align: right;
+}
+
+.pagina-parceiros .descricao-secundaria h2 {
+  margin-bottom: 4px;
+  font-size: 1.5rem;
+}
+
+.pagina-parceiros .descricao-secundaria p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.pagina-parceiros .logo-parceiro {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 9px;
+}
+
+.pagina-parceiros .logo-parceiro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pagina-parceiros .chamada-parceiros {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 95px;
+  margin-top: 32px;
+  padding: 12px 25px;
+  background-color: var(--verde);
+  border-radius: 9px;
+  color: #ffffff;
+}
+
+.pagina-parceiros .icone-chamada {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.pagina-parceiros .conteudo-chamada {
+  flex: 1;
+  min-width: 0;
+}
+
+.pagina-parceiros .conteudo-chamada h2 {
+  margin-bottom: 3px;
+  font-size: 1.5rem;
+}
+
+.pagina-parceiros .conteudo-chamada p {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.pagina-parceiros .botao-cadastro-parceiro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  min-height: 30px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: var(--terracota);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.pagina-parceiros .botao-cadastro-parceiro:hover {
+  filter: brightness(0.92);
+}
+
+@media (max-width: 750px) {
+  .pagina-parceiros .conteudo-parceiros {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .pagina-parceiros .impacto-parceiros {
+    grid-row: auto;
+  }
+
+  .pagina-parceiros .depoimento-parceiros {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagina-parceiros {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .pagina-parceiros .titulo-parceiros {
+    font-size: 1.25rem;
+  }
+
+  .pagina-parceiros .parceiro {
+    align-items: flex-start;
+  }
+
+  .pagina-parceiros .imagem-parceiro {
+    width: 75px;
+    height: 75px;
+  }
+
+  .pagina-parceiros .descricao-parceiro p,
+  .pagina-parceiros .descricao-secundaria p {
+    font-size: 0.85rem;
+  }
+
+  .pagina-parceiros .logo-parceiro {
+    width: 65px;
+    height: 65px;
+  }
+
+  .pagina-parceiros .chamada-parceiros {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .pagina-parceiros .icone-chamada {
+    width: 42px;
+    height: 42px;
+  }
+}
