@@ -85,7 +85,9 @@
 }
 
 .pagina-apoio .botao-principal {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 500px;
   justify-self: center;
   min-height: 45px;

@@ -7,7 +7,7 @@ if (btnCompartilhar) {
         await navigator.share({
           title: "Feira da Quebrada | Valorize o comércio local",
           text: "Conheça a Feira da Quebrada! Uma vitrine digital para descobrir produtos e serviços de empreendedores da nossa comunidade. Explore, encontre novidades e fortaleça o comércio local!",
-          url: window.location.href,
+          url: "https://gtsampaio.github.io/Feira-da-Quebrada/",
         });
       } catch (err) {
         console.log("Erro ao compartilhar:", err);

@@ -11,6 +11,7 @@ export default function createHeader() {
             <li><a href="../index.html">Início</a></li>
             <li><a href="/pages/catalogo.html">Catálogo</a></li>
             <li><a href="/pages/cadastro.html">Cadastro</a></li>
+            <li><a href="/pages/parceiros.html">Parceiros</a></li>
             <li>
               <button
                 type="button"
