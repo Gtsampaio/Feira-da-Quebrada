@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Empreendedor | Feira da Quebrada</title>
+    <meta
+      name="description"
+      content="Confira os detalhes dos produtos e serviços da Feira da Quebrada. Conheça os empreendedores da comunidade, explore as opções disponíveis e valorize o comércio local."
+    />
+    <link rel="icon" href="/assets/icons/coroa.svg" type="svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Nunito:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/loja.css" />
+  </head>
+  <body>
+    <header id="cabecalho"></header>
+    <main class="pagina-loja">
+      <div class="fundo">
+        <section class="perfil-loja">
+          <div class="cartao-perfil" id="cartao-perfil">
+            <div class="identificacao-loja">
+              <div class="empreendedor-vip">
+                <img class="coroa" src="../assets/icons/coroa.svg" alt="" />
+                <span class="selo-feira">Feito na quebrada</span>
+                <img
+                  class="img"
+                  src=""
+                  alt="Foto do empreendedor"
+                  id="foto-empreendedor"
+                />
+              </div>
+              <div>
+                <h1 id="nome-loja"></h1>
+                <p id="ultimo-acesso">Empreendedor da comunidade</p>
+              </div>
+            </div>
+            <div class="acoes-perfil">
+              <button type="button" id="botao-seguir">Redes Sociais</button>
+              <button type="button" id="botao-contato">
+                Entrar em contato
+              </button>
+            </div>
+          </div>
+          <div class="estatisticas-loja" id="estatisticas-loja">
+            <span id="total-produtos"></span>
+            <span id="total-pedidos"></span>
+            <span id="total-seguidores"></span>
+            <span id="total-seguindo"></span>
+            <span id="avaliacao-loja"></span>
+            <span id="tempo-loja"></span>
+          </div>
+        </section>
+      </div>
+      <section class="sobre-loja">
+        <h2>Sobre Nós</h2>
+        <p id="descricao-loja"></p>
+        <p id="mensagem-loja"></p>
+      </section>
+      <section class="produtos-loja">
+        <h2 id="titulo-produtos">Conheça nossos produtos!</h2>
+        <div class="lista-produtos-loja" id="lista-produtos-loja"></div>
+        <p class="sem-produtos" id="sem-produtos">
+          Este empreendedor ainda não cadastrou produtos.
+        </p>
+      </section>
+      <section class="explorar-loja">
+        <div class="contato-loja">
+          <h2>Não encontrou o que procurava?</h2>
+          <p>
+            Faça encomendas personalizadas com a gente! Consulte a
+            disponibilidade.
+          </p>
+          <button type="button" id="botao-whatsapp">
+            Me mande uma mensagem
+            <img src="../assets/icons/whatsapp.svg" alt="" />
+          </button>
+        </div>
+        <div class="voltar-catalogo">
+          <h2>Continue explorando!</h2>
+          <a href="catalogo.html"> Voltar ao catálogo </a>
+        </div>
+      </section>
+    </main>
+    <footer id="rodape"></footer>
+    <script type="module" src="../js/loja.js"></script>
+    <script type="module" src="../js/script.js"></script>
+  </body>
+</html>
