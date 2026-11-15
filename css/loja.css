@@ -1,0 +1,418 @@
+.pagina-loja {
+  width: 100%;
+  background-color: var(--creme);
+  color: var(--grafite);
+}
+
+.fundo {
+  background-color: #ffffff;
+  border-bottom: 2px solid var(--verde);
+}
+
+.pagina-loja .perfil-loja {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 70px;
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 25px;
+}
+
+.pagina-loja .cartao-perfil {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 153px;
+  padding: 18px;
+  overflow: visible;
+  border-radius: 7px;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--grafite);
+  color: #ffffff;
+}
+
+.pagina-loja .cartao-perfil::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.pagina-loja .selo-feira {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  top: -50px;
+  left: 10px;
+  z-index: 1;
+  padding: 4px 9px;
+  border-radius: 4px;
+  background-color: var(--terracota);
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.pagina-loja .identificacao-loja,
+.pagina-loja .acoes-perfil {
+  position: relative;
+  z-index: 1;
+}
+
+.pagina-loja .identificacao-loja {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.pagina-loja .cartao-perfil .empreendedor-vip {
+  position: relative;
+}
+
+.pagina-loja .cartao-perfil .coroa {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 30px;
+  transform: rotate(-35deg);
+  cursor: pointer;
+}
+
+.pagina-loja .cartao-perfil .coroa:hover + .selo-feira {
+  visibility: visible;
+  opacity: 1;
+}
+
+.pagina-loja .identificacao-loja .img {
+  width: 72px;
+  height: 72px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pagina-loja .identificacao-loja h1 {
+  margin-bottom: 2px;
+  font-size: 2rem;
+}
+
+.pagina-loja .identificacao-loja p {
+  font-size: 1.2rem;
+}
+
+.pagina-loja .acoes-perfil {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.pagina-loja .acoes-perfil button {
+  width: 45%;
+  min-height: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pagina-loja .acoes-perfil button:hover {
+  background-color: var(--verde);
+  border-color: var(--verde);
+}
+
+.pagina-loja .estatisticas-loja {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+  align-items: center;
+}
+
+.pagina-loja .estatisticas-loja span {
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 4px;
+  background-color: #477b66;
+  color: #ffffff;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.pagina-loja .estatisticas-loja img {
+  width: 16px;
+  height: 16px;
+  color: w;
+  object-fit: contain;
+}
+
+.pagina-loja .sobre-loja,
+.pagina-loja .produtos-loja,
+.pagina-loja .explorar-loja {
+  max-width: 1200px;
+  margin: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.pagina-loja .sobre-loja {
+  margin-top: 28px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 2px solid var(--terracota);
+  border-radius: 8px;
+}
+
+.pagina-loja .sobre-loja h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.pagina-loja .sobre-loja p {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.pagina-loja .produtos-loja {
+  margin-top: 35px;
+}
+
+.pagina-loja .produtos-loja > h2 {
+  margin-bottom: 22px;
+  font-size: 1.5rem;
+}
+
+.pagina-loja .lista-produtos-loja {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  gap: 32px;
+}
+
+.pagina-loja .produtos-loja:has(.lista-produtos-loja > :nth-child(4)) > h2 {
+  text-align: center;
+}
+
+.pagina-loja .lista-produtos-loja:has(> :nth-child(4)) {
+  justify-content: center;
+}
+
+.pagina-loja .card-produto-loja {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: transform 0.2s;
+}
+
+.pagina-loja .card-produto-loja:hover {
+  transform: translateY(-3px);
+}
+
+.pagina-loja .card-produto-loja > img {
+  display: block;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.pagina-loja .informacoes-produto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  padding: 8px;
+}
+
+.pagina-loja .informacoes-produto h3 {
+  font-size: 1rem;
+}
+
+.pagina-loja .informacoes-produto p {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+.pagina-loja .informacoes-produto strong {
+  margin-top: 3px;
+  font-size: 0.95rem;
+}
+
+.pagina-loja .informacoes-produto a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  min-height: 25px;
+  margin-top: 5px;
+  border: 1px solid var(--terracota);
+  border-radius: 20px;
+  color: var(--grafite);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.pagina-loja .informacoes-produto a:hover {
+  background-color: var(--terracota);
+  color: #ffffff;
+}
+
+.pagina-loja .sem-produtos {
+  display: none;
+  padding: 20px 0;
+  font-size: 1.3rem;
+}
+
+.pagina-loja .explorar-loja {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 45px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  border-top: 1px solid #d7ccbc;
+}
+
+.pagina-loja .contato-loja h2,
+.pagina-loja .voltar-catalogo h2 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.pagina-loja .contato-loja p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.pagina-loja .contato-loja button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 75%;
+  min-height: 36px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--verde);
+  color: #ffffff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pagina-loja .contato-loja button:hover {
+  filter: brightness(0.9);
+}
+
+.pagina-loja .contato-loja button img {
+  width: 17px;
+  height: 17px;
+}
+
+.pagina-loja .voltar-catalogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pagina-loja .voltar-catalogo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  min-height: 36px;
+  border-radius: 5px;
+  background-color: var(--terracota);
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.pagina-loja .voltar-catalogo a:hover {
+  filter: brightness(0.9);
+}
+
+.pagina-loja .loja-nao-encontrada {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .pagina-loja .perfil-loja {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .pagina-loja .estatisticas-loja {
+    gap: 12px;
+  }
+
+  .pagina-loja .lista-produtos-loja {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .pagina-loja .card-produto-loja > img {
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagina-loja .perfil-loja {
+    padding: 25px 15px;
+  }
+
+  .pagina-loja .estatisticas-loja {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .pagina-loja .estatisticas-loja span {
+    font-size: 0.7rem;
+  }
+
+  .pagina-loja .sobre-loja,
+  .pagina-loja .produtos-loja,
+  .pagina-loja .explorar-loja {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .pagina-loja .lista-produtos-loja {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .pagina-loja .card-produto-loja > img {
+    height: 110px;
+  }
+
+  .pagina-loja .explorar-loja {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .pagina-loja .contato-loja button,
+  .pagina-loja .voltar-catalogo a {
+    width: 100%;
+  }
+
+  .pagina-loja .voltar-catalogo {
+    align-items: stretch;
+  }
+}
