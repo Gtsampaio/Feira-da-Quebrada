@@ -162,10 +162,26 @@ main {
   font-size: 1rem;
 }
 
+.empreendedor-nome,
 .informacao-item p {
   margin: 1px 0 0;
   color: #666;
   font-size: 0.875rem;
+}
+
+.empreendedor-nome {
+  display: block;
+}
+
+.container-empreendedor {
+  position: relative;
+  display: inline-block;
+}
+
+.empreendedor-nome::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .acoes-produto {
@@ -273,7 +289,8 @@ main {
     border-right: none;
   }
 
-  .imagem-principal, .miniatura {
+  .imagem-principal,
+  .miniatura {
     height: 70%;
   }
 

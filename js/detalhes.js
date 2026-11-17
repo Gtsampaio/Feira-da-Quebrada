@@ -15,6 +15,7 @@ const imagemPrincipal = document.getElementById("imagem-principal");
 const miniaturas = document.getElementById("miniaturas");
 const botaoEditar = document.getElementById("botao-editar");
 const botaoExcluir = document.getElementById("botao-excluir");
+const lojaEmpreendedor = document.getElementById("empreendedor-produto");
 
 if (!produto) {
   paginaDetalhes.innerHTML = `
@@ -69,7 +70,7 @@ if (!produto) {
     });
     miniaturas.appendChild(miniatura);
   });
-
+  lojaEmpreendedor.href = `loja.html?id=${produto.empreendedorId}`
   botaoEditar.href = `cadastro.html?id=${produto.id}`;
   botaoExcluir.addEventListener("click", () => {
     const confirmar = confirm(
