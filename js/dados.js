@@ -1,3 +1,25 @@
+export const empreendedores = [
+  {
+    id: 1,
+    nome: "Ana Souza",
+    nomeLoja: "Doçuras da Ana",
+    categoria: "Alimentos e bebidas",
+    descricao:
+      "Aqui na cozinha da Ana, cada receita nasce aqui mesmo na comunidade, feita à mão e com muito carinho. Usamos ingredientes frescos e zero atalhos para levar o verdadeiro sabor de casa diretamente para a mesa dos nossos vizinhos.",
+    mensagem:
+      "Seja bem-vindo! Escolha o seu doce favorito e deixe a gente adoçar o seu dia.",
+    foto: "../assets/img/ana-perfil.png",
+    banner: "../assets/img/ana-banner.png",
+    contato: "5511999999999",
+    pedidosEntregues: 156,
+    seguidores: 80,
+    seguindo: 21,
+    avaliacao: 4.9,
+    quantidadeAvaliacoes: 146,
+    tempoNaPlataforma: "2 anos",
+  },
+];
+
 export const produtos = [
   {
     id: 1,
@@ -7,6 +29,7 @@ export const produtos = [
     descricao:
       "Bolo caseiro feito com ingredientes selecionados e muito carinho. Disponível em diversos tamanhos.",
     empreendedor: "Ana Souza",
+    empreendedorId: 1,
     contato: "11 9999-9999",
     entrega: "Consultar disponibilidade",
     imagens: [
