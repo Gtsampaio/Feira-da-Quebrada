@@ -11,9 +11,9 @@ export default function createHeader() {
         <nav class="navegacao">
           <ul>
             <li><a href="${root}/index.html">Início</a></li>
-            <li><a href="${root}/catalogo.html">Catálogo</a></li>
-            <li><a href="${root}/cadastro.html">Cadastro</a></li>
-            <li><a href="${root}/parceiros.html">Parceiros</a></li>
+            <li><a href="${root}/pages/catalogo.html">Catálogo</a></li>
+            <li><a href="${root}/pages/cadastro.html">Cadastro</a></li>
+            <li><a href="${root}/pages/parceiros.html">Parceiros</a></li>
             <li>
               <button
                 type="button"
