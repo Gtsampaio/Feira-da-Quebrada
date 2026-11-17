@@ -2,7 +2,7 @@ export default function createFooter() {
   const footer = document.getElementById("rodape");
   footer.innerHTML = `<div class="rodape">
         <div class="logo-rodape">
-          <img src="/assets/icons/logo.svg" alt="Logo Feira da Quebrada" />
+          <img src="./assets/icons/logo.svg" alt="Logo Feira da Quebrada" />
         </div>
         <div class="dados">
           <p class="ajuda">Precisa de ajuda? Contate-nos</p>
@@ -25,7 +25,7 @@ export default function createFooter() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/assets/icons/instagram.svg" alt="" aria-hidden="true" />
+              <img src="./assets/icons/instagram.svg" alt="" aria-hidden="true" />
             </a>
             <a
               href="https://twitter.com"
@@ -34,7 +34,7 @@ export default function createFooter() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/assets/icons/twitter.svg" alt="" aria-hidden="true" />
+              <img src="./assets/icons/twitter.svg" alt="" aria-hidden="true" />
             </a>
             <a
               href="https://tiktok.com"
@@ -43,7 +43,7 @@ export default function createFooter() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/assets/icons/tiktok.svg" alt="" aria-hidden="true" />
+              <img src="./assets/icons/tiktok.svg" alt="" aria-hidden="true" />
             </a>
             <a
               href="https://wa.me"
@@ -52,7 +52,7 @@ export default function createFooter() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/assets/icons/whatsapp.svg" alt="" aria-hidden="true" />
+              <img src="./assets/icons/whatsapp.svg" alt="" aria-hidden="true" />
             </a>
           </nav>
           <div class="direitos-autorais">
